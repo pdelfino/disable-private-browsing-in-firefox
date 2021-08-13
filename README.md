@@ -11,7 +11,7 @@ Obs.: This is the correct directory if you are using Firefox version 91.0 and Ub
 
 - 2. If there is no `policies.json` file, then create one: 
 ```bash
- sudo touch policies.json
+ $ sudo touch policies.json
 ```
 
 - 3. The file content need to be:
