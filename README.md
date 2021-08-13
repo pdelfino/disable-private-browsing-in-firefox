@@ -14,7 +14,7 @@ Obs.: This is the correct directory if you are using Firefox version 91.0 and Ub
  $ sudo touch policies.json
 ```
 
-- 3. The file content need to be:
+- 3. The file's content needs to be:
 ```json
 {
   "policies": {
