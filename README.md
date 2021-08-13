@@ -7,7 +7,7 @@ Follow the recipe:
 - 1. In terminal, go to:
  `/usr/lib/firefox/distribution`
 
-Obs.: This is the correct directory if you are using Firefox version 91.0 and Ubuntu 20.04.
+Obs.: This is the correct directory if you are using Firefox version 91.0 and Ubuntu 20.04. Depending on the Firefox version and/or OS this might be different.
 
 - 2. If there is no `policies.json` file, then create one: 
 ```bash
