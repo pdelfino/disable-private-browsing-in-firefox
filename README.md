@@ -1,4 +1,4 @@
-# How to disable private browsing in Firefox
+# How to permanently disable private browsing in Firefox
 
 Disable private browsing (incognito mode) permanently in Firefox (Ubuntu 20.04)
 
