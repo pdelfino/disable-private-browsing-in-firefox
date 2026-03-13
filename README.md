@@ -1,6 +1,6 @@
 # Disable Private Browsing in Firefox
 
-![The Night Watch](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/La_ronda_de_noche%2C_por_Rembrandt_van_Rijn.jpg/960px-La_ronda_de_noche%2C_por_Rembrandt_van_Rijn.jpg)
+![The Night Watch](./painting.jpg)
 
 *"The Night Watch" (1642) by Rembrandt van Rijn — [Wikipedia](https://en.wikipedia.org/wiki/The_Night_Watch)*
 
