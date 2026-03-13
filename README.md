@@ -1,22 +1,35 @@
-# How to permanently disable private browsing in Firefox
+# Disable Private Browsing in Firefox
 
-Disable private browsing (incognito mode) permanently in Firefox (Ubuntu 20.04)
+![The Night Watch](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/La_ronda_de_noche%2C_por_Rembrandt_van_Rijn.jpg/700px-La_ronda_de_noche%2C_por_Rembrandt_van_Rijn.jpg)
 
-I learned this [here](https://github.com/mozilla/policy-templates/blob/master/README.md#disableprivatebrowsing) with [@mkaply](https://github.com/mkaply).
+*"The Night Watch" (1642) by Rembrandt van Rijn — [Wikipedia](https://en.wikipedia.org/wiki/The_Night_Watch)*
 
-Follow the recipe:
+Permanently disable private browsing (incognito mode) in Firefox on Ubuntu 20.04 using Mozilla's policy engine.
 
-- 1. In terminal, go to:
- `/usr/lib/firefox/distribution`
+## Why
 
-Obs.: This is the correct directory if you are using Firefox version 91.0 and Ubuntu 20.04. Depending on the Firefox version and/or OS this might be different.
+Firefox's policy system allows administrators (or individual users) to enforce browser settings system-wide. This guide uses it to disable private browsing entirely, so that `Ctrl+Shift+P` no longer opens a private window.
 
-- 2. If there is no `policies.json` file, then create one: 
+Learned from [mozilla/policy-templates](https://github.com/mozilla/policy-templates/blob/master/README.md#disableprivatebrowsing) by [@mkaply](https://github.com/mkaply).
+
+## Instructions
+
+1. Navigate to the Firefox distribution directory:
+
 ```bash
- $ sudo touch policies.json
+cd /usr/lib/firefox/distribution
 ```
 
-- 3. The file's content needs to be:
+> This path applies to Firefox 91.0 on Ubuntu 20.04. It may differ on other versions or distributions.
+
+2. Create the policy file if it does not exist:
+
+```bash
+sudo touch policies.json
+```
+
+3. Set the file contents to:
+
 ```json
 {
   "policies": {
@@ -25,12 +38,15 @@ Obs.: This is the correct directory if you are using Firefox version 91.0 and Ub
 }
 ```
 
-- 4. If you are facing problems with "read-only", invoke your favorite editor using **sudo**, such as:
+4. If the file is read-only, open it with sudo:
 
 ```bash
-$ sudo emacs policies.json 
-$ sudo vim policies.json 
-$ sudo gedit policies.json 
+sudo vim policies.json
 ```
 
-- 5. Re-start firefox and try using `Control-Shift-P`. Hopefully, it won't work.
+5. Restart Firefox and verify -- `Ctrl+Shift+P` should no longer work.
+
+## Compatibility
+
+- **Tested on:** Ubuntu 20.04, Firefox 91.0
+- **Mechanism:** Mozilla Enterprise Policy Engine
